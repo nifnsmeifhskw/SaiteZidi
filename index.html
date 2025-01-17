@@ -13,16 +13,37 @@
             <p>This is my first website hosted on GitHub Pages.</p>
         </div>
     </header>
+
     <main>
         <section class="content">
-            <h2>About This Website</h2>
-            <p>This is a simple website designed to showcase how you can easily create a stylish web page using GitHub Pages and CSS.</p>
+            <h2>Clicker Game</h2>
+            <p>Click the button as fast as you can!</p>
+            
+            <div class="game">
+                <p>Clicks: <span id="click-count">0</span></p>
+                <button id="click-button">Click Me!</button>
+                
+                <div id="upgrade-section" style="display: none;">
+                    <p>Upgrade multiplier: <span id="multiplier">1x</span></p>
+                    <button id="buy-upgrade">Buy x5 Multiplier for 100 Clicks</button>
+                </div>
+
+                <p>Goal: 500 clicks!</p>
+            </div>
+            
+            <div id="game-over" style="display: none;">
+                <h3>Congratulations! You won!</h3>
+                <p>You reached 500 clicks!</p>
+            </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <p>&copy; 2025 My Beautiful Website. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="game.js"></script> <!-- Подключение JS файла -->
 </body>
 </html>
