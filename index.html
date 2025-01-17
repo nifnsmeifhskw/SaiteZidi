@@ -3,112 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход и регистрация</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 80vh;
-            padding: 2rem;
-        }
-        .form-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-        .form-container h2 {
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        .form-container input {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-container button {
-            width: 100%;
-            padding: 0.8rem;
-            margin-top: 1rem;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .form-container button:hover {
-            background-color: #0056b3;
-        }
-        .toggle-link {
-            text-align: center;
-            margin-top: 1rem;
-            color: #007bff;
-            cursor: pointer;
-        }
-        .toggle-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>My Beautiful Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS файла -->
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать!</h1>
+        <div class="container">
+            <h1>Welcome to My Beautiful Website</h1>
+            <p>This is my first website hosted on GitHub Pages.</p>
+        </div>
     </header>
     <main>
-        <div class="form-container" id="form-container">
-            <h2>Вход</h2>
-            <form id="login-form">
-                <input type="text" placeholder="Введите логин" required>
-                <input type="password" placeholder="Введите пароль" required>
-                <button type="submit">Войти</button>
-            </form>
-            <p class="toggle-link" onclick="toggleForm()">Нет аккаунта? Зарегистрируйтесь</p>
-        </div>
+        <section class="content">
+            <h2>About This Website</h2>
+            <p>This is a simple website designed to showcase how you can easily create a stylish web page using GitHub Pages and CSS.</p>
+        </section>
     </main>
-    <script>
-        const formContainer = document.getElementById('form-container');
-
-        function toggleForm() {
-            if (formContainer.innerHTML.includes('Вход')) {
-                formContainer.innerHTML = `
-                    <h2>Регистрация</h2>
-                    <form id="register-form">
-                        <input type="text" placeholder="Введите логин" required>
-                        <input type="email" placeholder="Введите email" required>
-                        <input type="password" placeholder="Введите пароль" required>
-                        <button type="submit">Зарегистрироваться</button>
-                    </form>
-                    <p class="toggle-link" onclick="toggleForm()">Уже есть аккаунт? Войдите</p>
-                `;
-            } else {
-                formContainer.innerHTML = `
-                    <h2>Вход</h2>
-                    <form id="login-form">
-                        <input type="text" placeholder="Введите логин" required>
-                        <input type="password" placeholder="Введите пароль" required>
-                        <button type="submit">Войти</button>
-                    </form>
-                    <p class="toggle-link" onclick="toggleForm()">Нет аккаунта? Зарегистрируйтесь</p>
-                `;
-            }
-        }
-    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Beautiful Website. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
